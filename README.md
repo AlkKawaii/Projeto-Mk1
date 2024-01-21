@@ -23,9 +23,9 @@ isso está ficando selvagem de mais
 * teste
 
 - [X] Começar
-- [ ] Terminar Git e GitHub básico
+- [X] Terminar Git e GitHub básico
 - [ ] Terminar Html e CSS básico
-- [ ] Terminar JavaScrip básico
+- [ ] Terminar JavaScript básico
 - [ ] começar o intermediário
 
 [Meu servidor do discord!](https://dsc.gg/rpts)
