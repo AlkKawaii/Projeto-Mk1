@@ -67,7 +67,7 @@ body {
 .categories {
     display: flex;
     gap: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .category {
@@ -81,7 +81,12 @@ body {
     cursor: pointer;
 }
 
-.category:hover{
+.category:hover {
+    background-color: #00000020;
+    color: #0f0f0f;
+}
+
+.category.selected {
     background-color: #0f0f0f;
     color: white;
 }
