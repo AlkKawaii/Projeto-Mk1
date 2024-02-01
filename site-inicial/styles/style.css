@@ -112,8 +112,8 @@ body {
 }
 
 .block-menu {
-border-bottom: rgba(0, 0, 0, 0.070) solid 1px;
-padding: 12px;
+    border-bottom: rgba(0, 0, 0, 0.070) solid 1px;
+    padding: 12px;
 }
 
 .block-item {
@@ -135,4 +135,8 @@ padding: 12px;
 
 .block-item:hover {
     background-color: #0000000D;
+}
+
+.svg-sidebar {
+    width: 24px;
 }
