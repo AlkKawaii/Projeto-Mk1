@@ -116,7 +116,7 @@ body {
     padding: 12px;
 }
 
-.block-menu:last-child{
+.block-menu:last-child {
     border-bottom: none;
 }
 
@@ -141,6 +141,17 @@ body {
     background-color: #0000000D;
 }
 
+.login-block {
+    padding: 10px 20px;
+}
+
 .svg-sidebar {
     width: 24px;
 }
+
+.login-text {
+    padding-left: 20px;
+}
+
+.login-link
+{}
