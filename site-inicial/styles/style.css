@@ -111,6 +111,10 @@ body {
     min-width: 240px;
 }
 
+.svg-sidebar {
+    width: 24px;
+}
+
 .block-menu {
     border-bottom: rgba(0, 0, 0, 0.070) solid 1px;
     padding: 12px;
@@ -143,15 +147,18 @@ body {
 
 .login-block {
     padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
-.svg-sidebar {
-    width: 24px;
-}
 
 .login-text {
     padding-left: 20px;
 }
 
-.login-link
-{}
+.login-link {
+    padding-left: 20px;
+    color: inherit;
+    text-decoration: none;
+}
