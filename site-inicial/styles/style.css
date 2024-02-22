@@ -116,6 +116,10 @@ body {
     padding: 12px;
 }
 
+.block-menu:last-child{
+    border-bottom: none;
+}
+
 .block-item {
     background: none;
     border-radius: 10px;
