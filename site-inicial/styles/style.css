@@ -13,12 +13,16 @@ body {
 .main-content {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 0.5px;
 }
 
 .central-layout {
     display: flex;
     gap: 30px;
+}
+
+.video-box {
+    width: 360px;
 }
 
 .thumb {
@@ -53,10 +57,6 @@ body {
     gap: 10px;
 }
 
-.video-box {
-    width: 360px;
-}
-
 .content-box {
     display: flex;
     flex-wrap: wrap;
@@ -76,6 +76,7 @@ body {
 }
 
 .categories {
+    padding: 12px;
     display: flex;
     gap: 10px;
     margin-bottom: 25px;
@@ -90,6 +91,7 @@ body {
     font-weight: 400;
     background-color: #0000000d;
     cursor: pointer;
+    transition: background-color 0.5s;
 }
 
 .category:hover {
@@ -135,6 +137,7 @@ body {
     border: none;
     width: 220px;
     cursor: pointer;
+    transition: background-color 0.5s;
 }
 
 .block-item.selected {
@@ -170,16 +173,76 @@ body {
     fill: #065fd4;
     padding: 2px 7.5px;
     width: max-content;
+    transition: background-color 0.5s;
+}
+
+.login-link:hover {
+    background-color: rgba(43, 143, 250, 0.2);
 }
 
 .header-layout {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px;
+    height: 56px;
+    min-width: fit-content;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    border-radius: 100px;
 }
 
 .logo-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+    margin-left: 12px;
+}
+
+.external-icon {
+    width: 90px;
 }
 
 .search-box {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 14px;
+}
+
+.search-input {
+    height: 30px;
+    width: 450px;
+    border-radius: 100px;
+    border: rgba(0, 0, 0, 0.25) solid 0.5px;
+    padding: 10px;
+}
+
+.svg-search {
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    background-color: #0000000d;
+    border-radius: 1000px;
 }
 
 .login-box {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 4px;
+}
+
+.svg-header {
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    border-radius: 100px;
+    transition: background-color 0.5s;
+}
+
+.svg-header:hover {
+    background-color: #0000000d;
 }
