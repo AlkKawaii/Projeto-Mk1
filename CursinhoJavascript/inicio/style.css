@@ -1,8 +1,9 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 /* #btnContainer, #counter {
@@ -17,6 +18,9 @@
 
 }
 
+
+*/
+
 .btns {
     border: none;
     background-color: rgba(0, 60, 112, 0.25);
@@ -24,10 +28,10 @@
     padding: 0.5em;
     font-size: 1.2em;
     cursor: pointer;
-    transition: all .5s;
+    transition: all 0.5s;
 }
 
 .btns:hover {
     background-color: rgba(0, 60, 112, 0.5);
     transform: translateY(-5px) scale(0.95);
-} */
+}
