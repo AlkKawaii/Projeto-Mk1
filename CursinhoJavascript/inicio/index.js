@@ -64,4 +64,31 @@
 //     }
 // };
 
+// const input = document.getElementById("input");
+// const btn = document.getElementById("submit");
+// const result = document.getElementById("result");
+// const reset = document.getElementById("reset");
+// let guessNum = Math.floor(Math.random() * 100 + 1);
+// let numValue;
 
+// reset.onclick = () => {
+//     guessNum = Math.floor(Math.random() * 100 + 1);
+//     result.innerHTML = "";
+// };
+
+// btn.onclick = () => {
+//     numValue = Number(input.value);
+//     if (numValue === guessNum) {
+//         window.alert(`Você acertou o número! Ele era: ${guessNum}`);
+//         guessNum = Math.floor(Math.random() * 100 + 1);
+//         result.innerHTML = "";
+//     } else if (numValue > 100 || numValue < 1) {
+//         window.alert("Número inválido, digite algo entre 1 a 100");
+//     } else if (numValue > guessNum) {
+//         result.innerHTML += `${numValue} é muito alto <br>`;
+//     } else if (numValue < guessNum) {
+//         result.innerHTML += `${numValue} é muito baixo <br>`;
+//     } else {
+//         result.innerHTML += 'Uh, como você chegou nesse erro? <br>'
+//     }
+// };

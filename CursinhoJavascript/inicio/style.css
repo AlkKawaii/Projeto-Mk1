@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    font-family: "Cascadia Code", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
         "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
@@ -21,17 +21,61 @@
 
 */
 
+#container {
+    margin: auto;
+    padding: 1em    ;
+    margin-top: 25vh;
+    display: flex;
+    flex-flow: column;
+    width: 25vw;
+    background-color: rgba(0, 60, 112, 0.2);
+    border-radius: 25px;
+    gap: 1em;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+}
+
+#title {
+    font-size: 1.3em;
+}
+
+#tempContainer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+#result {
+    height: 50px;
+    text-align: center;
+}
+
 .btns {
     border: none;
     background-color: rgba(0, 60, 112, 0.25);
     border-radius: 20px;
-    padding: 0.5em;
-    font-size: 1.2em;
+    padding: 0.3em;
+    font-size: 1.1em;
     cursor: pointer;
     transition: all 0.5s;
+    width: 30%;
 }
 
 .btns:hover {
     background-color: rgba(0, 60, 112, 0.5);
     transform: translateY(-5px) scale(0.95);
+}
+
+.inp {
+    border: none;
+    padding: 0.2em;
+    border-bottom: 2px solid rgba(0, 60, 112, 0.5);
+    transition: all 1s;
+    background: none;
+}
+
+.inp:focus {
+    border-bottom: 3px solid rgba(0, 60, 112, 0.75);
+    outline: none;
 }
