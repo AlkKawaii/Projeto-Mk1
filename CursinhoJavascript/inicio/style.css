@@ -70,9 +70,11 @@
 .inp {
     border: none;
     padding: 0.2em;
+    width: 35%;
     border-bottom: 2px solid rgba(0, 60, 112, 0.5);
-    transition: all 1s;
     background: none;
+    text-align: center;
+    font-size: 1.5em;
 }
 
 .inp:focus {

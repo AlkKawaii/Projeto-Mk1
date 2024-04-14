@@ -38,7 +38,7 @@
         <button type="submit" id="submit" class="btns">Enviar</button>
         <button type="submit" id="reset" class="btns">Reiniciar</button>
         <p id="result"></p> -->
-        <main id="container">
+        <form id="container">
             <h1 id="title">Conversor de temperatura</h1>
             <div id="tempContainer">
                 <label for="input">Insira a temperatura: </label>
@@ -47,11 +47,12 @@
                     name="temperature"
                     id="input"
                     class="inp"
+                    value="0"
                 />
             </div>
             <div id="radioContainer">
                 <div class="tempsContainer1">
-                    <input type="radio" name="temp" id="temperature1" checked/>
+                    <input type="radio" name="temp" id="temperature1" checked />
                     <label for="temperature1">Celsius -> Fahrenheit</label>
                 </div>
                 <div class="tempsContainer2">
@@ -59,9 +60,11 @@
                     <label for="temperature2">Fahrenheit -> Celsius</label>
                 </div>
             </div>
-            <button type="submit" id="submit" class="btns">Enviar</button>
-            <p id="result">A temperatura em Fahrenheit é: <br></p>
-        </main>
+            <button type="button" id="submit" class="btns" onclick="convert()">
+                Enviar
+            </button>
+            <p id="result">A temperatura em Fahrenheit é: <br /></p>
+        </form>
         <script src="index.js" defer></script>
     </body>
 </html>

@@ -92,3 +92,22 @@
 //         result.innerHTML += 'Uh, como você chegou nesse erro? <br>'
 //     }
 // };
+
+const input = document.getElementById("input");
+const celsiusF = document.getElementById("temperature1");
+const fahrenheitC = document.getElementById("temperature2");
+const result = document.getElementById("result");
+let temp;
+
+function convert() {
+    temp = Number(input.value);
+    if (celsiusF.checked) {
+        temp = (temp * 9) / 5 + 32;
+        result.innerHTML = `A temperatura em Fahrenheit é: <br> ${temp.toFixed(2)}°F`;
+    } else if (fahrenheitC.checked) {
+        temp = ((temp - 32) * 5) / 9;
+        result.innerHTML = `A temperatura em Celsius é: <br> ${temp.toFixed(2)}°C`;
+    } else {
+        result.innerHTML = "Como raios você conseguiu esse erro";
+    }
+}
