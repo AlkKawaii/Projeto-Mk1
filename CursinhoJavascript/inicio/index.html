@@ -38,7 +38,7 @@
         <button type="submit" id="submit" class="btns">Enviar</button>
         <button type="submit" id="reset" class="btns">Reiniciar</button>
         <p id="result"></p> -->
-        <form id="container">
+        <!-- <form id="container">
             <h1 id="title">Conversor de temperatura</h1>
             <div id="tempContainer">
                 <label for="input">Insira a temperatura: </label>
@@ -64,7 +64,17 @@
                 Enviar
             </button>
             <p id="result">A temperatura em Fahrenheit é: <br /></p>
-        </form>
+        </form> -->
+        <div id="container">
+            <h1 id="title">Rolar Dados!</h1>
+            <div id="diceSelector">
+                <label for="input">Número de dados: </label>
+                <input type="number" name="" id="input" class="inp" />
+            </div>
+            <button type="button" id="roll" class="btns" onclick="rollDices()">Rolar Dados</button>
+            <p id="result">Dados: </p>
+            <div id="imagesContainer"></div>
+        </div>
         <script src="index.js" defer></script>
     </body>
 </html>

@@ -93,21 +93,47 @@
 //     }
 // };
 
-const input = document.getElementById("input");
-const celsiusF = document.getElementById("temperature1");
-const fahrenheitC = document.getElementById("temperature2");
-const result = document.getElementById("result");
-let temp;
+// const input = document.getElementById("input");
+// const celsiusF = document.getElementById("temperature1");
+// const fahrenheitC = document.getElementById("temperature2");
+// const result = document.getElementById("result");
+// let temp;
 
-function convert() {
-    temp = Number(input.value);
-    if (celsiusF.checked) {
-        temp = (temp * 9) / 5 + 32;
-        result.innerHTML = `A temperatura em Fahrenheit é: <br> ${temp.toFixed(2)}°F`;
-    } else if (fahrenheitC.checked) {
-        temp = ((temp - 32) * 5) / 9;
-        result.innerHTML = `A temperatura em Celsius é: <br> ${temp.toFixed(2)}°C`;
-    } else {
-        result.innerHTML = "Como raios você conseguiu esse erro";
+// function convert() {
+//     temp = Number(input.value);
+//     if (celsiusF.checked) {
+//         temp = (temp * 9) / 5 + 32;
+//         result.innerHTML = `A temperatura em Fahrenheit é: <br> ${temp.toFixed(2)}°F`;
+//     } else if (fahrenheitC.checked) {
+//         temp = ((temp - 32) * 5) / 9;
+//         result.innerHTML = `A temperatura em Celsius é: <br> ${temp.toFixed(2)}°C`;
+//     } else {
+//         result.innerHTML = "Como raios você conseguiu esse erro";
+//     }
+// }
+
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// const maximum = Math.max(...numbers)
+
+// console.log(maximum)
+
+// const slkmermao = (...sim) => {
+//     console.log(sim)
+// }
+
+// slkmermao(2, 3, 'sim')
+
+function rollDices() {
+    const dicesNum = Number(document.getElementById("input").value);
+    const result = document.getElementById("result");
+    const imageContainer = document.getElementById("imagesContainer");
+    let dicesValue = [];
+    let diceFaces = [];
+    for (let i = 0; i < dicesNum; i++) {
+        const diceValue = Math.floor(Math.random() * 6 + 1);
+        dicesValue.push(diceValue);
+        diceFaces.push(`<img src="diceFaces/Alea_${diceValue}.png" alt="dice face ${diceValue}">`)
     }
+    result.innerHTML = `Dados: ${dicesValue.join(", ")}`;
+    imageContainer.innerHTML = diceFaces.join(" ")
 }
