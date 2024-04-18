@@ -3,7 +3,25 @@
     margin: 0;
     box-sizing: border-box;
     font-family: "Cascadia Code", "Lucida Sans", "Lucida Sans Regular",
-        "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(0, 60, 112, 0.25);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0);
 }
 
 /* #btnContainer, #counter {
@@ -31,6 +49,16 @@
 }
 
 */
+
+
+#imagesContainer {
+    display: flex;
+    flex-flow: wrap;
+    width: 100%;
+    justify-content: center;
+    height: 112px;
+    overflow-y: auto;
+}
 
 .btns {
     border: none;
@@ -88,21 +116,3 @@
     user-select: none;
 }
 
-
-::-webkit-scrollbar {
-    width: 7px;
-}
-
-::-webkit-scrollbar-track {
-    background-color: rgba(0, 60, 112, 0.25);
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(0, 0, 0);
-}

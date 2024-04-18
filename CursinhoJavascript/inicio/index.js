@@ -135,5 +135,5 @@ function rollDices() {
         diceFaces.push(`<img src="diceFaces/Alea_${diceValue}.png" alt="dice face ${diceValue}">`)
     }
     result.innerHTML = `Dados: ${dicesValue.join(", ")}`;
-    imageContainer.innerHTML = diceFaces.join(" ")
+    imageContainer.innerHTML = diceFaces.join("")
 }
