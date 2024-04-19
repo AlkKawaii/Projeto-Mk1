@@ -268,32 +268,44 @@ map
  * Objects
  */
 
-const person = {
-    name: "Aroldo",
-    lastName: "Jorge",
-    age: 86,
-    isEmployed: false,
-    funFact: "Aroldo ama Aroldo Jorge (É ele mesmo))",
-    saySomething: (thing = "aha") => {
-        console.log(`OIiiiiii eu sou o Aroldo Jorge, ${thing}`);
-    },
-    saySomethingThis: function (thing = "aha") {
-        console.log(
-            `OIiiiiii eu sou o ${this.name} ${this.lastName}, ${thing}`
-        ); // This só funciona com a palavra function e não com arrow functions
-    },
-};
+// const person = {
+//     name: "Aroldo",
+//     lastName: "Jorge",
+//     age: 86,
+//     isEmployed: false,
+//     funFact: "Aroldo ama Aroldo Jorge (É ele mesmo))",
+//     saySomething: (thing = "aha") => {
+//         console.log(`OIiiiiii eu sou o Aroldo Jorge, ${thing}`);
+//     },
+//     saySomethingThis: function (thing = "aha") {
+//         console.log(
+//             `OIiiiiii eu sou o ${this.name} ${this.lastName}, ${thing}`
+//         ); // This só funciona com a palavra function e não com arrow functions
+//     },
+// };
 
-person.saySomething(":OOOO");
-person.saySomethingThis(":OOOOOO");
+// person.saySomething(":OOOO");
+// person.saySomethingThis(":OOOOOO");
 
 // Construtores
 
-function car(make, model, year, color) {
-    this.make = make;
-    this.model = model;
-    this.year = year;
-    this.color = color;
-}
+// function car(make, model, year, color) {
+//     this.make = make;
+//     this.model = model;
+//     this.year = year;
+//     this.color = color;
+// }
 
-const camaro = new car('Chevrolet', 'Camaro', 2000, 'yellow');
+// const camaro = new car('Chevrolet', 'Camaro', 2000, 'yellow');
+
+/**
+ * Classes
+ */
+
+class Product {
+    constructor(name = '', price, kg = 1) {
+        this.name = name;
+        this.price = price * kg;
+        this.kg = kg;
+    }
+}
