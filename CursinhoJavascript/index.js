@@ -302,10 +302,55 @@ map
  * Classes
  */
 
-class Product {
-    constructor(name = '', price, kg = 1) {
-        this.name = name;
-        this.price = price * kg;
-        this.kg = kg;
-    }
+// class Product {
+//     constructor(name = "", price = 10, kg = 1) {
+//         this.name = name;
+//         this.price = price * kg;
+//         this.kg = kg;
+//     }
+
+//     buy(money) {
+//         if (money >= this.price) {
+//             window.alert(
+//                 `Você comprou ${this.name} por R$${this.price.toFixed(
+//                     2
+//                 )}, você deu R$${money.toFixed(2)}, recebendo assim, R$${(
+//                     money - this.price
+//                 ).toFixed(2)} de troco`
+//             );
+//         } else {
+//             window.alert("Você não tem dinheiro para isso.");
+//         }
+//     }
+// }
+
+// const bestSword = new Product("Best Sword", 1000, 10);
+
+/**
+ * Static
+ */
+
+// class CircleUtil {
+//     static PI = Math.PI;
+
+//     static diameter(radius) {
+//         return radius * 2;
+//     }
+
+//     static circumference(radius) {
+//         return Number((2 * this.PI * radius).toFixed(2));
+//     }
+
+//     static area(radius) {
+//         return Number((this.PI * radius ** 2).toFixed(2));
+//     }
+// }
+
+
+/**
+ * Inheritance
+ */
+
+class Animal {
+    
 }
