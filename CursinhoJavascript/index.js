@@ -346,11 +346,68 @@ map
 //     }
 // }
 
-
 /**
  * Inheritance
  */
 
-class Animal {
-    
+// class Animal {
+//     alive = true;
+
+//     constructor(name) {
+//         this.name = name;
+//     }
+
+//     eat() {
+//         console.log(`This ${this.name} is eating`);
+//     }
+
+//     sleep() {
+//         console.log(`This ${this.name} is sleeping`);
+//     }
+// }
+
+// class Rabbit extends Animal {
+//     constructor(name) {
+//         super(name);
+//     }
+// }
+
+// class Fish extends Animal {
+//     constructor(name) {
+//         super(name);
+//     }
+// }
+
+/**
+ * Getters and setters
+ */
+
+class rectangle {
+    constructor(width, height) {
+        this._width = width;
+        this._height = height;
+    }
+
+    set width(width) {
+        if (width > 0) {
+            this._width = width;
+        } else {
+            console.error("Tem que ser maior que 0 né maluco");
+        }
+    }
+
+    set height(height) {
+        if (height > 0) {
+            this._height = height;
+        } else {
+            console.error("Tem que ser maior que 0 né maluco");
+        }
+    }
+    get width() {
+        return this._width;
+    }
+
+    get height() {
+        return this._height;
+    }
 }
