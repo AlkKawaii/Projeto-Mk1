@@ -382,32 +382,132 @@ map
  * Getters and setters
  */
 
-class rectangle {
-    constructor(width, height) {
-        this._width = width;
-        this._height = height;
-    }
+// class rectangle {
+//     constructor(width, height) {
+//         this._width = width;
+//         this._height = height;
+//     }
 
-    set width(width) {
-        if (width > 0) {
-            this._width = width;
-        } else {
-            console.error("Tem que ser maior que 0 né maluco");
-        }
-    }
+//     set width(width) {
+//         if (width > 0) {
+//             this._width = width;
+//         } else {
+//             console.error("Tem que ser maior que 0 né maluco");
+//         }
+//     }
 
-    set height(height) {
-        if (height > 0) {
-            this._height = height;
-        } else {
-            console.error("Tem que ser maior que 0 né maluco");
-        }
-    }
-    get width() {
-        return this._width;
-    }
+//     set height(height) {
+//         if (height > 0) {
+//             this._height = height;
+//         } else {
+//             console.error("Tem que ser maior que 0 né maluco");
+//         }
+//     }
+//     get width() {
+//         return this._width;
+//     }
 
-    get height() {
-        return this._height;
-    }
-}
+//     get height() {
+//         return this._height;
+//     }
+// }
+
+/**
+ * sorting
+ */
+
+// let nums = [40, 100, 1, 5, 25, 10, 40, 100, 1, 5, 25, 10, 40, 100, 1, 5, 25, 10, 40, 100, 1, 5, 25, 10,];
+
+// nums.sort((a, b) => 0.5 - Math.random());
+
+// console.log(nums);
+
+// shuffle(nums);
+
+// console.log(nums);
+
+// function shuffle(array) {
+//     for (let i = array.length - 1; i > 0; i--) {
+//         const rand = Math.floor(Math.random() * (i + 1));
+
+//         [array[i], array[rand]] = [array[rand], array[i]];
+//     }
+// }
+
+/**
+ * date !!!
+ */
+
+// const date1 = new Date();
+// const date2 = new Date(2023, 2, 12, 9, 34, 10, 100);
+
+// const difference = date1 - date2;
+
+// console.log(difference / 1000 / 60 / 60 / 24)
+
+/**
+ * Closures
+ */
+
+// function outer() {
+//     let message = "Hello";
+//     function inner() {
+//         message += " World!";
+//         console.log(message);
+//     }
+//     inner();
+// }
+
+// function counterCreate() {
+//     let count = 0;
+
+//     function increment() {
+//         count++;
+//         console.log(`Count increased to ${count}`);
+//     }
+
+//     return { increment: increment };
+// }
+
+// const counter = new counterCreate();
+// const counter2 = new counterCreate();
+
+/**
+ * Set Timeout
+ */
+
+// let timeID;
+
+// function startTimer() {
+//     console.info('Timer iniciado')
+//     timeID = setTimeout(() => {
+//         window.alert("Slk");
+//     }, 3000);
+// }
+
+// function stopTimer() {
+//     console.info('Timer cancelado')
+//     clearTimeout(timeID);
+// }
+
+/**
+ * console time
+ */
+
+// console.time("Inicio");
+// for (let i = 0; i < 100; i++) {
+//     console.log(i)
+// }
+// console.timeEnd("Inicio");
+
+/**
+ * Currency
+ */
+
+// let dindin = 19292929.98
+
+// dindin = dindin.toLocaleString(undefined, {style: 'currency', currency: 'BRL'})
+
+/**
+ * 
+ */
