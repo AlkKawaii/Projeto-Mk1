@@ -51,14 +51,14 @@
 */
 
 
-#imagesContainer {
+/* #imagesContainer {
     display: flex;
     flex-flow: wrap;
     width: 100%;
     justify-content: center;
     height: 112px;
     overflow-y: auto;
-}
+} */
 
 .btns {
     border: none;
