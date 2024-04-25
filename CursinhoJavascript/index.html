@@ -77,7 +77,17 @@
         </div> -->
         <!-- <button class="btns" onclick="startTimer()">Iniciar Timeout</button>
         <button class="btns" onclick="stopTimer()">Cancelar Timeout</button> -->
-        <h1></h1>
+        <h1 id="title">Calculadora De Juros Compostos</h1>
+        <div id="container">
+            <label for="invest">Investimento</label>
+            <input type="number" name="invest" id="invest" class="inp" value="0" min="0">
+            <label for="rate">Taxa</label>
+            <input type="number" name="rate" id="rate" class="inp" value="0" min="0">
+            <label for="years">Anos</label>
+            <input type="number" name="years" id="years" class="inp" value="0" min="0">
+            <button type="button" id="submit" class="btns" onclick="calc()">Enviar</button>
+            <p id="result">Total: <span>R$ 0,00</span></p>
+        </div>
         <script src="index.js" defer></script>
     </body>
 </html>

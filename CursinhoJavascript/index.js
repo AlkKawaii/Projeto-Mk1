@@ -509,5 +509,34 @@ map
 // dindin = dindin.toLocaleString(undefined, {style: 'currency', currency: 'BRL'})
 
 /**
- * 
+ * juros compostos
  */
+
+function calc() {
+    const invest = document.getElementById("invest");
+    const rate = document.getElementById("rate");
+    const years = document.getElementById("years");
+    const result = document.getElementById("result");
+
+    // values
+    let investValue = Number(invest.value);
+    let rateValue = Number(rate.value) / 100;
+    let yearsValue = Number(years.value);
+
+    if (investValue < 0 || isNaN(investValue)) {
+        investValue = 0;
+        invest.value = 0;
+    }
+    if (rateValue < 0 || isNaN(rateValue)) {
+        rateValue = 0;
+        rate.value = 0;
+    }
+    if (yearsValue < 0 || isNaN(yearsValue)) {
+        yearsValue = 0;
+        years.value = 0;
+    }
+
+    const amount = investValue * Math.pow((1 + rateValue / 1), 1 * yearsValue)
+    result.innerHTML = `Total: ${amount.toLocaleString(undefined, {style: "currency", currency: "BRL"})}`
+
+}

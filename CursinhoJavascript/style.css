@@ -3,7 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: "Cascadia Code", "Lucida Sans", "Lucida Sans Regular",
-    "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -36,12 +36,6 @@
 
 }
 
-
-*/
-
-/* 
-
-
 #tempContainer {
     display: flex;
     flex-flow: column;
@@ -49,7 +43,6 @@
 }
 
 */
-
 
 /* #imagesContainer {
     display: flex;
@@ -79,11 +72,12 @@
 .inp {
     border: none;
     padding: 0.2em;
-    width: 35%;
+    width: 40%;
     border-bottom: 2px solid rgba(0, 60, 112, 0.5);
     background: none;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1.75em;
+    margin-bottom: 5px;
 }
 
 .inp:focus {
@@ -92,27 +86,39 @@
 }
 
 #title {
-    font-size: 1.3em;
+    font-size: 1.7em;
 }
 
 #result {
-    height: 50px;
+    height: 25px;
+    margin-top: 10px;
     text-align: center;
     overflow-y: auto;
 }
 
+#result span {
+    color: green;
+}
+
 #container {
-    margin: auto;
-    padding: 1em    ;
-    margin-top: 25vh;
+    padding: 1.5em;
     display: flex;
     flex-flow: column;
-    width: 30vw;
+    width: 25vw;
     background-color: rgba(0, 60, 112, 0.2);
     border-radius: 25px;
-    gap: 1em;
+    gap: 0.5em;
     align-items: center;
     justify-content: space-between;
     user-select: none;
 }
 
+body {
+    display: flex;
+    width: 100vw;
+    flex-flow: column;
+    align-items: center;
+    margin-top: 25px;
+    gap: 40px;
+    background-color: rgba(250, 235, 215, 0.3);
+}
