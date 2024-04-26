@@ -512,31 +512,50 @@ map
  * juros compostos
  */
 
-function calc() {
-    const invest = document.getElementById("invest");
-    const rate = document.getElementById("rate");
-    const years = document.getElementById("years");
-    const result = document.getElementById("result");
+// function calc() {
+//     const invest = document.getElementById("invest");
+//     const rate = document.getElementById("rate");
+//     const years = document.getElementById("years");
+//     const result = document.getElementById("result");
 
-    // values
-    let investValue = Number(invest.value);
-    let rateValue = Number(rate.value) / 100;
-    let yearsValue = Number(years.value);
+//     // values
+//     let investValue = Number(invest.value);
+//     let rateValue = Number(rate.value) / 100;
+//     let yearsValue = Number(years.value);
 
-    if (investValue < 0 || isNaN(investValue)) {
-        investValue = 0;
-        invest.value = 0;
-    }
-    if (rateValue < 0 || isNaN(rateValue)) {
-        rateValue = 0;
-        rate.value = 0;
-    }
-    if (yearsValue < 0 || isNaN(yearsValue)) {
-        yearsValue = 0;
-        years.value = 0;
-    }
+//     if (investValue < 0 || isNaN(investValue)) {
+//         investValue = 0;
+//         invest.value = 0;
+//     }
+//     if (rateValue < 0 || isNaN(rateValue)) {
+//         rateValue = 0;
+//         rate.value = 0;
+//     }
+//     if (yearsValue < 0 || isNaN(yearsValue)) {
+//         yearsValue = 0;
+//         years.value = 0;
+//     }
 
-    const amount = investValue * Math.pow((1 + rateValue / 1), 1 * yearsValue)
-    result.innerHTML = `Total: ${amount.toLocaleString(undefined, {style: "currency", currency: "BRL"})}`
+//     const amount = investValue * Math.pow(1 + rateValue / 1, 1 * yearsValue);
+//     result.innerHTML = `Total: <span>${amount.toLocaleString(undefined, {
+//         style: "currency",
+//         currency: "BRL",
+//     })}</span>`;
+// }
 
+/**
+ * relógio
+ */
+
+function clock() {
+    const date = new Date();
+    let hours = date.getHours().toString().padStart(2, 0);
+    let minutes = date.getMinutes().toString().padStart(2, 0);
+    let seconds = date.getSeconds().toString().padStart(2, 0);
+    const time = `${hours}:${minutes}:${seconds}`
+    document.getElementById('clock').innerHTML = `<span>${time}</span>`
 }
+
+clock()
+
+setInterval(clock, 500)
