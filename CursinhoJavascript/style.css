@@ -109,7 +109,7 @@
     padding: 1.5em;
     display: flex;
     flex-flow: column;
-    width: clamp(25vw, 30em, 50vw);
+    width: clamp(25vw, 50vw, fit-content);
     background-color: rgba(0, 60, 112, 0.2);
     border-radius: 25px;
     gap: 0.5em;
