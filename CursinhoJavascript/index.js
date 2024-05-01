@@ -435,7 +435,7 @@ map
 // }
 
 /**
- * date !!!
+ * Date !!!
  */
 
 // const date1 = new Date();
@@ -560,3 +560,59 @@ map
 
 // setInterval(clock, 500)
 
+/**
+ * Cronômetro
+ */
+
+// const clock = document.getElementById("clock");
+// const startBtn = document.getElementById("start");
+// const stopBtn = document.getElementById("stop");
+// const resetBtn = document.getElementById("reset");
+// let timer;
+// let startTime;
+// let elapsed = 0;
+
+// function start() {
+// 	startTime = Date.now() - elapsed;
+// 	timer = setInterval(update, 10);
+// 	startBtn.disabled = true;
+// 	stopBtn.disabled = false;
+// 	resetBtn.disabled = false;
+// }
+
+// function stop() {
+// 	clearInterval(timer);
+// 	elapsed = Date.now() - startTime;
+// 	startBtn.disabled = false;
+// 	stopBtn.disabled = true;
+// 	resetBtn.disabled = false;
+// }
+
+// function reset() {
+//     clearInterval(timer);
+// 	elapsed = 0;
+// 	startTime = 0;
+//     startBtn.disabled = false;
+//     stopBtn.disabled = true;
+// 	resetBtn.disabled = true;
+//     clock.innerHTML = `00:00:00:00`;
+// }
+
+// function update() {
+// 	const current = Date.now();
+// 	elapsed = current - startTime;
+// 	let milli = Math.floor((elapsed % 1000) / 10);
+// 	milli = String(milli).padStart(2, 0);
+// 	let secs = Math.floor((elapsed / 1000) % 60);
+// 	secs = String(secs).padStart(2, 0);
+// 	let minutes = Math.floor((elapsed / (1000 * 60))  % 60);
+// 	minutes = String(minutes).padStart(2, 0);
+// 	let hours = Math.floor(elapsed / (1000 * 60 * 60));
+// 	hours = String(hours).padStart(2, 0);
+// 	clock.innerHTML = `${hours}:${minutes}:${secs}:${milli}`;
+// }
+
+import {PI, circumference} from "./utils.js";
+
+
+console.log(circumference(1000000).toLocaleString(undefined))
