@@ -4,6 +4,8 @@
     box-sizing: border-box;
     font-family: "Cascadia Code", "Lucida Sans", "Lucida Sans Regular",
         "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    transition: all .2s;
+    user-select: none;
 }
 
 ::-webkit-scrollbar {
@@ -126,4 +128,9 @@ body {
     margin-top: 25px;
     gap: 40px;
     background-color: rgba(250, 235, 215, 0.3);
+    overflow-x: hidden;
+}
+
+body *:hover {
+    transform: scale(1.25);
 }
