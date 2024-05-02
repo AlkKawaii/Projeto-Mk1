@@ -633,13 +633,12 @@ const el5 = document.querySelectorAll('.container');
 
 const newLi = document.createElement('li');
 newLi.innerHTML = 'Super Odd Mario Bros';
-newLi.style.textAlign = 'justify'
-newLi.style.height = '60px'
+newLi.style.textAlign = 'justify';
+newLi.style.height = '60px';
 el4.appendChild(newLi);
 setTimeout(() => {
-    el4.removeChild(newLi)
+	el4.removeChild(newLi);
 }, 5000);
-
 
 el1.style.backgroundColor = 'purple';
 el1.style.color = 'white';
@@ -690,3 +689,10 @@ el4.nextElementSibling.style.backgroundColor = 'lightblue';
 el4.previousElementSibling.style.backgroundColor = 'blue';
 el4.parentElement.style.backgroundColor = 'lightYellow';
 Array.from(el4.children).forEach((el) => (el.style.fontSize = '20px'));
+
+Array.from(el3d5).forEach((el) => el.addEventListener('click', lining));
+Array.from(el2).forEach((el) => el.addEventListener('mouseover', lining));
+
+function lining(ev) {
+	this.classList.toggle('lined');
+}

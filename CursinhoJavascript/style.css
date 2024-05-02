@@ -60,6 +60,19 @@
     text-shadow: 5px 5px 10px beige;
 } */
 
+ol {
+    list-style: none;
+}
+
+.lined {
+    text-decoration: line-through;
+}
+
+body *:hover {
+    transform-origin: bottom left;
+    transform: scale(1.1) skew(3deg);
+}
+
 .btns {
     border: none;
     background-color: rgba(0, 60, 112, 0.25);
@@ -129,8 +142,4 @@ body {
     gap: 40px;
     background-color: rgba(250, 235, 215, 0.3);
     overflow-x: hidden;
-}
-
-body *:hover {
-    transform: scale(1.25);
 }
