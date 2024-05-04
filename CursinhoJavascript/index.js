@@ -692,6 +692,7 @@ Array.from(el4.children).forEach((el) => (el.style.fontSize = '20px'));
 
 Array.from(el3d5).forEach((el) => el.addEventListener('click', lining));
 Array.from(el2).forEach((el) => el.addEventListener('mouseover', lining));
+Array.from(el2).forEach((el) => el.addEventListener('mouseout', lining));
 
 function lining(ev) {
 	this.classList.toggle('lined');
