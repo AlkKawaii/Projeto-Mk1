@@ -624,76 +624,126 @@ map
  * DOM Series :O
  */
 
-const el1 = document.getElementById('heading');
-const el2 = document.getElementsByClassName('container');
-const el3 = document.getElementsByTagName('ol');
-const el3d5 = document.getElementsByTagName('li');
-const el4 = document.querySelector('ol');
-const el5 = document.querySelectorAll('.container');
+// const el1 = document.getElementById('heading');
+// const el2 = document.getElementsByClassName('container');
+// const el3 = document.getElementsByTagName('ol');
+// const el3d5 = document.getElementsByTagName('li');
+// const el4 = document.querySelector('ol');
+// const el5 = document.querySelectorAll('.container');
 
-const newLi = document.createElement('li');
-newLi.innerHTML = 'Super Odd Mario Bros';
-newLi.style.textAlign = 'justify';
-newLi.style.height = '60px';
-el4.appendChild(newLi);
-setTimeout(() => {
-	el4.removeChild(newLi);
-}, 5000);
+// const newLi = document.createElement('li');
+// newLi.innerHTML = 'Super Odd Mario Bros';
+// newLi.style.textAlign = 'justify';
+// newLi.style.height = '60px';
+// el4.appendChild(newLi);
+// setTimeout(() => {
+// 	el4.removeChild(newLi);
+// }, 5000);
 
-el1.style.backgroundColor = 'purple';
-el1.style.color = 'white';
+// el1.style.backgroundColor = 'purple';
+// el1.style.color = 'white';
 
-console.log(el2);
+// console.log(el2);
 
-el2[0].innerHTML = 'a';
-el2[1].innerHTML = 'b';
-el2[2].innerHTML = 'c';
+// el2[0].innerHTML = 'a';
+// el2[1].innerHTML = 'b';
+// el2[2].innerHTML = 'c';
 
-for (let i = 0; i < el2.length; i++) {
-	el2[i].innerHTML = i + 1;
-	el2[i].style.height = `50px`;
-	el2[i].style.width = `50px`;
-	el2[i].style.textAlign = `center`;
-}
+// for (let i = 0; i < el2.length; i++) {
+// 	el2[i].innerHTML = i + 1;
+// 	el2[i].style.height = `50px`;
+// 	el2[i].style.width = `50px`;
+// 	el2[i].style.textAlign = `center`;
+// }
 
-for (let i = 0; i < el3.length; i++) {
-	console.log(el3[i]);
-}
+// for (let i = 0; i < el3.length; i++) {
+// 	console.log(el3[i]);
+// }
 
-for (let el3el of el3) {
-	el3el.style.borderRadius = `10px`;
-	el3el.style.height = `20vh`;
-	el3el.style.width = `10vw`;
-	el3el.style.backgroundColor = 'purple';
-}
+// for (let el3el of el3) {
+// 	el3el.style.borderRadius = `10px`;
+// 	el3el.style.height = `20vh`;
+// 	el3el.style.width = `10vw`;
+// 	el3el.style.backgroundColor = 'purple';
+// }
 
-for (let el3el of el3d5) {
-	el3el.style.borderRadius = `10px`;
-	el3el.style.backgroundColor = 'red';
-}
+// for (let el3el of el3d5) {
+// 	el3el.style.borderRadius = `10px`;
+// 	el3el.style.backgroundColor = 'red';
+// }
 
-for (let el5el of el5) {
-	el5el.style.borderRadius = `10px`;
-	el5el.style.backgroundColor = 'cyan';
-}
+// for (let el5el of el5) {
+// 	el5el.style.borderRadius = `10px`;
+// 	el5el.style.backgroundColor = 'cyan';
+// }
 
-el4.style.backgroundColor = 'pink';
+// el4.style.backgroundColor = 'pink';
 
-el5.forEach((el5el, i) => {
-	el5el.style.fontSize = `${16 * (i + 1)}px`;
-});
+// el5.forEach((el5el, i) => {
+// 	el5el.style.fontSize = `${16 * (i + 1)}px`;
+// });
 
-el4.firstElementChild.style.color = 'blue';
-el4.lastElementChild.style.color = 'pink';
-el4.nextElementSibling.style.backgroundColor = 'lightblue';
-el4.previousElementSibling.style.backgroundColor = 'blue';
-el4.parentElement.style.backgroundColor = 'lightYellow';
-Array.from(el4.children).forEach((el) => (el.style.fontSize = '20px'));
+// el4.firstElementChild.style.color = 'blue';
+// el4.lastElementChild.style.color = 'pink';
+// el4.nextElementSibling.style.backgroundColor = 'lightblue';
+// el4.previousElementSibling.style.backgroundColor = 'blue';
+// el4.parentElement.style.backgroundColor = 'lightYellow';
+// Array.from(el4.children).forEach((el) => (el.style.fontSize = '20px'));
 
-Array.from(el3d5).forEach((el) => el.addEventListener('click', lining));
-Array.from(el2).forEach((el) => el.addEventListener('mouseover', lining));
-Array.from(el2).forEach((el) => el.addEventListener('mouseout', lining));
+// Array.from(el3d5).forEach((el) => el.addEventListener('click', lining));
+// Array.from(el2).forEach((el) => el.addEventListener('mouseover', lining));
+// Array.from(el2).forEach((el) => el.addEventListener('mouseout', lining));
 
-function lining(ev) {
-	this.classList.toggle('lined');
-}
+// function lining(ev) {
+// 	this.classList.toggle('lined');
+// }
+
+/**
+ * Key event
+ */
+
+// const speed = 500;
+// let pos = { x: 0, y: 0 };
+
+// document.addEventListener('keydown', (ev) => {
+// 	ev.preventDefault();
+// 	if (ev.key.startsWith('Arrow')) {
+// 		switch (ev.key) {
+// 			case 'ArrowUp':
+// 				pos.y -= speed;
+// 				break;
+// 			case 'ArrowDown':
+// 				pos.y += speed;
+// 				break;
+// 			case 'ArrowLeft':
+// 				pos.x -= speed;
+// 				break;
+// 			case 'ArrowRight':
+// 				pos.x += speed;
+// 				break;
+// 		}
+// 		face[0].style.top = `${pos.y}px`
+// 		face[0].style.left = `${pos.x}px`
+// 	}
+// });
+
+// console.log(face[0])
+// console.log(speed)
+// console.log(pos)
+
+/**
+ * hide and show
+ */
+
+// const face = document.getElementsByTagName('div');
+// const btn = document.getElementsByTagName('button');
+
+// btn[0].onclick = ev => {
+// 	face[0].classList.toggle('visible')
+// }
+
+
+/**
+ * Jokenpô
+ */
+
