@@ -742,8 +742,9 @@ map
 // 	face[0].classList.toggle('visible')
 // }
 
-
 /**
  * Jokenpô
  */
+
+const choices = ['rock', 'scissor', 'paper'];
 

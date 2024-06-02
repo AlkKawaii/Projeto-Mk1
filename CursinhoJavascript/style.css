@@ -142,3 +142,11 @@ body {
 	background-color: rgba(121, 131, 170, 0.5);
 	overflow-x: hidden;
 }
+
+#scores p:nth-child(1) span {
+	color: greenyellow;
+}
+
+#scores p:nth-child(2) span {
+	color: red;
+}
