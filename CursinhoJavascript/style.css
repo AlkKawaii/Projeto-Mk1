@@ -30,43 +30,51 @@
     display: block;
     text-align: center;
     user-select: none;
-}
-
-#counter {
-    font-size: 5em;
-    transition: all .5s;
-
-}
-
-#tempContainer {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-}
-
-*/
+	}
+	
+	#counter {
+		font-size: 5em;
+		transition: all .5s;
+		
+		}
+		
+		#tempContainer {
+			display: flex;
+			flex-flow: column;
+			align-items: center;
+			}
+			
+			*/
 
 /* #imagesContainer {
-    display: flex;
+				display: flex;
     flex-flow: wrap;
     width: 100%;
     justify-content: center;
     height: 112px;
     overflow-y: auto;
-} */
+	} */
 
 /* #clock {
-    font-size: 5em;
-    text-shadow: 5px 5px 10px beige;
-} */
+		font-size: 5em;
+		text-shadow: 5px 5px 10px beige;
+		} */
 
+/* #scores p:nth-child(1) span {
+	color: greenyellow;
+}
+		
+#scores p:nth-child(2) span {
+	color: red;
+} */
+/* 
 ol {
 	list-style: none;
 }
 
 .lined {
 	text-decoration: line-through;
-}
+} */
 
 .btns {
 	border: none;
@@ -77,7 +85,7 @@ ol {
 	cursor: pointer;
 	transition: all 0.5s;
 	width: 30%;
-    aspect-ratio: 1;
+	aspect-ratio: 1;
 }
 
 .btns:hover {
@@ -108,7 +116,7 @@ ol {
 #result {
 	margin-top: 10px;
 	text-align: center;
-    font-size: 40px;
+	font-size: 40px;
 }
 
 #result span {
@@ -116,7 +124,7 @@ ol {
 }
 
 p {
-    text-align: center;
+	text-align: center;
 }
 
 #container {
@@ -139,14 +147,57 @@ body {
 	align-items: center;
 	margin-top: 25px;
 	gap: 40px;
-	background-color: rgba(121, 131, 170, 0.5);
+	background-color: rgba(98, 107, 140, 0.6);
 	overflow-x: hidden;
 }
 
-#scores p:nth-child(1) span {
-	color: greenyellow;
+.slider {
+	position: relative;
+	width: 10%;
+	margin: auto;
 }
 
-#scores p:nth-child(2) span {
-	color: red;
+.slider img {
+	width: 100%;
+	animation: undisplayed 1s forwards;
+}
+
+img.displaySlide {
+	display: block;
+	animation: displayed 1s forwards;
+}
+
+#prev {
+	position: absolute;
+	top: 25%;
+	left: -50px;
+}
+
+#next {
+	position: absolute;
+	top: 25%;
+	right: -50px;
+}
+
+@keyframes displayed {
+	from {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+@keyframes undisplayed {
+	from {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+	to {
+		opacity: 0;
+		transform: translateY(10px);
+		display: none;
+	}
 }

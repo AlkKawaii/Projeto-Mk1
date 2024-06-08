@@ -746,5 +746,92 @@ map
  * Jokenpô
  */
 
-const choices = ['rock', 'scissor', 'paper'];
+// const choices = ['rock', 'scissor', 'paper'];
 
+// const playerDisplay = document.getElementById('playerChoice');
+// const computerDisplay = document.getElementById('computerChoice');
+// const playerScoreDisplay = document.getElementById('playerScore');
+// const computerScoreDisplay = document.getElementById('computerScore');
+// const resultDisplay = document.getElementById('result');
+
+// let playerScore = 0;
+// let computerScore = 0;
+
+// function playGame(choice) {
+// 	const computerChoice = choices[Math.floor(Math.random() * 3)];
+// 	computerDisplay.textContent = `Computer: ${computerChoice}`;
+// 	playerDisplay.textContent = `Player: ${choice}`;
+// 	if (choice === computerChoice) {
+// 		resultDisplay.textContent = 'É um empate!';
+// 	} else {
+// 		switch (choice) {
+// 			case 'rock':
+// 				if (computerChoice === 'scissor') {
+// 					resultDisplay.textContent = 'Você ganhou!';
+// 					playerScore++;
+// 				} else {
+// 					resultDisplay.textContent = 'Você perdeu!';
+// 					computerScore++;
+// 				}
+// 				break;
+// 			case 'paper':
+// 				if (computerChoice === 'rock') {
+// 					resultDisplay.textContent = 'Você ganhou!';
+// 					playerScore++;
+// 				} else {
+// 					resultDisplay.textContent = 'Você perdeu!';
+// 					computerScore++;
+// 				}
+// 				break;
+// 			case 'scissor':
+// 				if (computerChoice === 'paper') {
+// 					resultDisplay.textContent = 'Você ganhou!';
+// 					playerScore++;
+// 				} else {
+// 					resultDisplay.textContent = 'Você perdeu!';
+// 					computerScore++;
+// 				}
+// 				break;
+// 		}
+// 	}
+// 	playerScoreDisplay.textContent = playerScore;
+// 	computerScoreDisplay.textContent = computerScore;
+// }
+
+/**
+ * Image Slider
+ */
+
+const slides = document.querySelectorAll('.slides img');
+let slideIndex = 0;
+let intervalID = null;
+
+document.addEventListener('DOMContentLoaded', initSlider());
+
+function initSlider() {
+	slides[slideIndex].classList.add('displaySlide');
+	intervalID = setInterval(nextSlide, 5000);
+}
+
+function showSlide(index) {
+	if (index >= slides.length) {
+		slideIndex = 0;
+	} else if (index < 0) {
+		slideIndex = slides.length - 1;
+	}
+
+	slides.forEach((slide) => {
+		slide.classList.remove('displaySlide');
+	});
+	slides[slideIndex].classList.add('displaySlide');
+}
+
+function prevSlide() {
+	slideIndex--;
+	showSlide(slideIndex);
+}
+
+function nextSlide() {
+	slideIndex++;
+	showSlide(slideIndex);
+}

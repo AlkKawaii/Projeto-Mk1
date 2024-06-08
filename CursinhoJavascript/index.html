@@ -136,23 +136,37 @@
         </ol> -->
 		<!-- <div>😧</div>
         <button class="btns">Hide</button> -->
-		<h1 id="title">Jo-ken-pô!</h1>
+		<!-- <h1 id="title">Jo-ken-pô!</h1>
 		<div>
-			<button class="btns">👊</button>
-			<button class="btns">🖐️</button>
-			<button class="btns">✌️</button>
+			<button class="btns" onclick="playGame('rock')">👊</button>
+			<button class="btns" onclick="playGame('paper')">🖐️</button>
+			<button class="btns" onclick="playGame('scissor')">✌️</button>
 		</div>
 		<div id="results">
+			<p id="result">Escolha entre Pedra, Papel e Tesoura!</p>
+			<br />
 			<div id="choices">
 				<p id="playerChoice">Player:</p>
 				<p id="computerChoice">Computer:</p>
 			</div>
-			<p id="result">______</p>
 			<div id="scores">
-				<p id="playerScore">Player: <span>0</span></p>
-				<p id="computerScore">Computer: <span>0</span></p>
+				<p>Player: <span id="playerScore">0</span></p>
+				<p>Computer: <span id="computerScore">0</span></p>
 			</div>
-		</div>
-		<script type="module" src="index.js" defer></script>
+		</div> -->
+		<h1 id="title">Image Slider!</h1>
+		<div class="slider">
+            <div class="slides">
+                <img class="slide" src="diceFaces/Alea_1.png" alt="dado">
+                <img class="slide" src="diceFaces/Alea_2.png" alt="dado">
+                <img class="slide" src="diceFaces/Alea_3.png" alt="dado">
+                <img class="slide" src="diceFaces/Alea_4.png" alt="dado">
+                <img class="slide" src="diceFaces/Alea_5.png" alt="dado">
+                <img class="slide" src="diceFaces/Alea_6.png" alt="dado">
+            </div>
+            <button class="btns" id="prev" onclick="prevSlide()">&#10094</button>
+            <button class="btns" id="next" onclick="nextSlide()">&#10095</button>
+        </div>
+		<script src="index.js" defer></script>
 	</body>
 </html>
