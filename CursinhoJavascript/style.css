@@ -159,7 +159,7 @@ body {
 
 .slider img {
 	width: 100%;
-	animation: undisplayed 1s forwards;
+	display: none;
 }
 
 img.displaySlide {
@@ -182,22 +182,10 @@ img.displaySlide {
 @keyframes displayed {
 	from {
 		opacity: 0;
-		transform: translateY(10px);
+		transform: translateY(-5px);
 	}
 	to {
 		opacity: 1;
 		transform: translateY(0px);
-	}
-}
-
-@keyframes undisplayed {
-	from {
-		opacity: 1;
-		transform: translateY(0px);
-	}
-	to {
-		opacity: 0;
-		transform: translateY(10px);
-		display: none;
 	}
 }
