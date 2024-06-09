@@ -187,7 +187,7 @@ Random Password
 //     if (length <= 0) {
 //         console.log("O tamanho deve ser maior ou igual a 1");
 //     } else if (tempPass.length === 0) {
-//         console.log("Tem que ter pelo menos um tipo de chat selecionado");
+//         console.log("Tem que ter pelo menos um tipo de caractere selecionado");
 //     } else {
 //         for (let i = 0; i < length; i++) {
 //             const randomChar = Math.floor(Math.random() * tempPass.length);
@@ -249,10 +249,10 @@ map
 // const myArray = [1, 2, 3, 4, 4, 5, 5, 6, 6, 7, 7];
 
 // function isEven(element) {
-//         return element % 2 === 0;
-//     }
+// 	return element % 2 === 0;
+// }
 
-//     const noon = myArray.filter(isEven);
+// const noon = myArray.filter(isEven);
 
 /**
  * reduce
@@ -260,9 +260,9 @@ map
 
 // const myArray = [1, 2, 3, 4, 4, 5, 8, 6, 6, 7, 7];
 
-// const total = myArray.reduce((a,b) => a + b, 0);
+// const total = myArray.reduce((a, b) => a + b, 0);
 
-// const max = myArray.reduce((a,b) => Math.max(a,b), 0)
+// const max = myArray.reduce((a, b) => Math.max(a, b), 0);
 
 /**
  * Objects
@@ -303,28 +303,28 @@ map
  */
 
 // class Product {
-//     constructor(name = "", price = 10, kg = 1) {
-//         this.name = name;
-//         this.price = price * kg;
-//         this.kg = kg;
-//     }
+// 	constructor(name = '', price = 10, kg = 1) {
+// 		this.name = name;
+// 		this.price = price * kg;
+// 		this.kg = kg;
+// 	}
 
-//     buy(money) {
-//         if (money >= this.price) {
-//             window.alert(
-//                 `Você comprou ${this.name} por R$${this.price.toFixed(
-//                     2
-//                 )}, você deu R$${money.toFixed(2)}, recebendo assim, R$${(
-//                     money - this.price
-//                 ).toFixed(2)} de troco`
-//             );
-//         } else {
-//             window.alert("Você não tem dinheiro para isso.");
-//         }
-//     }
+// 	buy(money) {
+// 		if (money >= this.price) {
+// 			window.alert(
+// 				`Você comprou ${this.name} por R$${this.price.toFixed(
+// 					2
+// 				)}, você deu R$${money.toFixed(2)}, recebendo assim, R$${(
+// 					money - this.price
+// 				).toFixed(2)} de troco`
+// 			);
+// 		} else {
+// 			window.alert('Você não tem dinheiro para isso.');
+// 		}
+// 	}
 // }
 
-// const bestSword = new Product("Best Sword", 1000, 10);
+// const bestSword = new Product('Best Sword', 1000, 10);
 
 /**
  * Static
@@ -416,7 +416,10 @@ map
  * sorting
  */
 
-// let nums = [40, 100, 1, 5, 25, 10, 40, 100, 1, 5, 25, 10, 40, 100, 1, 5, 25, 10, 40, 100, 1, 5, 25, 10,];
+// let nums = [
+// 	40, 100, 1, 5, 25, 10, 40, 100, 1, 5, 25, 10, 40, 100, 1, 5, 25, 10, 40,
+// 	100, 1, 5, 25, 10,
+// ];
 
 // nums.sort((a, b) => 0.5 - Math.random());
 
@@ -427,11 +430,11 @@ map
 // console.log(nums);
 
 // function shuffle(array) {
-//     for (let i = array.length - 1; i > 0; i--) {
-//         const rand = Math.floor(Math.random() * (i + 1));
+// 	for (let i = array.length - 1; i > 0; i--) {
+// 		const rand = Math.floor(Math.random() * (i + 1));
 
-//         [array[i], array[rand]] = [array[rand], array[i]];
-//     }
+// 		[array[i], array[rand]] = [array[rand], array[i]];
+// 	}
 // }
 
 /**
@@ -476,7 +479,7 @@ map
  * Set Timeout
  */
 
-// let timeID;
+let timeID;
 
 // function startTimer() {
 //     console.info('Timer iniciado')
@@ -802,36 +805,64 @@ map
  * Image Slider
  */
 
-const slides = document.querySelectorAll('.slides img');
-let slideIndex = 0;
-let intervalID = null;
+// const slides = document.querySelectorAll('.slides img');
+// let slideIndex = 0;
+// let intervalID = null;
 
-document.addEventListener('DOMContentLoaded', initSlider());
+// document.addEventListener('DOMContentLoaded', initSlider());
 
-function initSlider() {
-	slides[slideIndex].classList.add('displaySlide');
-	intervalID = setInterval(nextSlide, 5000);
-}
+// function initSlider() {
+// 	slides[slideIndex].classList.add('displaySlide');
+// 	intervalID = setInterval(nextSlide, 5000);
+// }
 
-function showSlide(index) {
-	if (index >= slides.length) {
-		slideIndex = 0;
-	} else if (index < 0) {
-		slideIndex = slides.length - 1;
-	}
+// function showSlide(index) {
+// 	if (index >= slides.length) {
+// 		slideIndex = 0;
+// 	} else if (index < 0) {
+// 		slideIndex = slides.length - 1;
+// 	}
 
-	slides.forEach((slide) => {
-		slide.classList.remove('displaySlide');
+// 	slides.forEach((slide) => {
+// 		slide.classList.remove('displaySlide');
+// 	});
+// 	slides[slideIndex].classList.add('displaySlide');
+// }
+
+// function prevSlide() {
+// 	slideIndex--;
+// 	showSlide(slideIndex);
+// }
+
+// function nextSlide() {
+// 	slideIndex++;
+// 	showSlide(slideIndex);
+// }
+
+/**
+ * Promises!!!
+ */
+
+function walkDog() {
+	return new Promise((resolve, reject) => {
+		setTimeout(() => {
+			resolve('Você andou com o cachorro!');
+		}, 1500);
 	});
-	slides[slideIndex].classList.add('displaySlide');
 }
 
-function prevSlide() {
-	slideIndex--;
-	showSlide(slideIndex);
+function cleanKitchen() {
+	return new Promise((resolve, reject) => {
+		setTimeout(() => {
+			resolve('Você limpou a cozinha!');
+		}, 2500);
+	});
 }
 
-function nextSlide() {
-	slideIndex++;
-	showSlide(slideIndex);
+function takeOutTrash() {
+	return new Promise((resolve, reject) => {
+		setTimeout(() => {
+			resolve('Você levou o lixo pra fora!');
+		}, 500);
+	});
 }
