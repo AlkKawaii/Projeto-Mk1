@@ -479,7 +479,7 @@ map
  * Set Timeout
  */
 
-let timeID;
+// let timeID;
 
 // function startTimer() {
 //     console.info('Timer iniciado')
@@ -840,29 +840,75 @@ let timeID;
 // }
 
 /**
- * Promises!!!
+ * Promises!!! and other asynchronous things i think
  */
 
-function walkDog() {
-	return new Promise((resolve, reject) => {
-		setTimeout(() => {
-			resolve('Você andou com o cachorro!');
-		}, 1500);
-	});
-}
+// function walkDog(did = true) {
+// 	return new Promise((resolve, reject) => {
+// 		setTimeout(() => {
+// 			if (did) {
+// 				resolve('Você andou com o cachorro!');
+// 			} else {
+// 				reject('Você não andou com o cachorro >:(');
+// 			}
+// 		}, 1500);
+// 	});
+// }
 
-function cleanKitchen() {
-	return new Promise((resolve, reject) => {
-		setTimeout(() => {
-			resolve('Você limpou a cozinha!');
-		}, 2500);
-	});
-}
+// function cleanKitchen(did = true) {
+// 	return new Promise((resolve, reject) => {
+// 		setTimeout(() => {
+// 			if (did) {
+// 				resolve('Você limpou a cozinha!');
+// 			} else {
+// 				reject('Você não limpou a cozinha >:(');
+// 			}
+// 		}, 2500);
+// 	});
+// }
 
-function takeOutTrash() {
-	return new Promise((resolve, reject) => {
-		setTimeout(() => {
-			resolve('Você levou o lixo pra fora!');
-		}, 500);
-	});
-}
+// function takeOutTrash(did = true) {
+// 	return new Promise((resolve, reject) => {
+// 		setTimeout(() => {
+// 			if (did) {
+// 				resolve('Você levou o lixo pra fora!');
+// 			} else {
+// 				reject('Você não levou o lixo para fora >:(');
+// 			}
+// 		}, 500);
+// 	});
+// }
+
+// cleanKitchen()
+// 	.then((result) => {
+// 		console.log(result);
+// 		return walkDog();
+// 	})
+// 	.then((result) => {
+// 		console.log(result);
+// 		return takeOutTrash(true);
+// 	})
+// 	.then((result) => {
+// 		console.log(result);
+// 		console.log('Você fez todas as suas tarefas!!!');
+// 	})
+// 	.catch((error) => {
+// 		console.error(error);
+// 		console.warn('Você falhou em concluir as suas tarefas :(');
+// 	});
+
+// async function doThings() {
+// 	try {
+// 		const walkDogResult = await walkDog(false);
+// 		console.log(walkDogResult);
+// 		const cleanKitchenResult = await cleanKitchen();
+// 		console.log(cleanKitchenResult);
+// 		const trashOutResult = await takeOutTrash();
+// 		console.log(trashOutResult);
+// 		console.log('Você terminou tudo :)');
+// 	} catch (error) {
+// 		console.error(error);
+// 	}
+// }
+
+// doThings();
