@@ -933,6 +933,6 @@ map
 
 // console.log(jsObject);
 
-fetch('people.json')
-	.then((response) => response.json())
-	.then((values) => console.log(values));
+// fetch('people.json')
+// 	.then((response) => response.json())
+// 	.then((values) => console.log(values));
