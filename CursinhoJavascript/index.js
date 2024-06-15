@@ -917,3 +917,22 @@ map
  * JSON
  */
 
+// const person = {
+// 	name: 'John',
+// 	lastName: 'Doe',
+// 	age: 19,
+// 	isEmployed: true,
+// 	hobbies: ['foo', 'bar'],
+// };
+// const jsonString = JSON.stringify(person);
+
+// console.log(person);
+// console.log(jsonString);
+
+// const jsObject = JSON.parse(jsonString);
+
+// console.log(jsObject);
+
+fetch('people.json')
+	.then((response) => response.json())
+	.then((values) => console.log(values));

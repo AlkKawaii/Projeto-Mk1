@@ -1,0 +1,14 @@
+[
+	{
+		"name": "John",
+		"lastName": "Doe",
+		"age": 19,
+		"isEmployed": true
+	},
+	{
+		"name": "Joana",
+		"lastName": "Doe",
+		"age": 29,
+		"isEmployed": false
+	}
+]
