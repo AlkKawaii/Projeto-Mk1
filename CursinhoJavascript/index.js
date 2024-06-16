@@ -935,4 +935,36 @@ map
 
 // fetch('people.json')
 // 	.then((response) => response.json())
-// 	.then((values) => console.log(values));
+// 	.then((values) => {
+// 		values.forEach((element) => {
+// 			console.log(element.name);
+// 		});
+// 	})
+// 	.catch((error) => console.error(error));
+
+/**
+ * Cookie
+ */
+
+function setCookie(name, value, expireInDays = 365) {
+	const date = new Date();
+	date.setTime(date.getTime() + expireInDays * 24 * 60 * 60 * 1000);
+	let expires = 'expires=' + date.toUTCString();
+	document.cookie = `${name}=${value}; ${expires}; path=/`;
+}
+
+function deleteCookie(name) {
+	setCookie(name, null, null);
+}
+
+function getCookie(name) {
+	const decodedCookie = decodeURIComponent(document.cookie);
+	const cookieArray = decodedCookie.split('; ');
+	let result = null;
+	cookieArray.forEach((element) => {
+		if (element.indexOf(name) === 0) {
+			result = element.substring(name.length + 1);
+		}
+	});
+	return result;
+}
