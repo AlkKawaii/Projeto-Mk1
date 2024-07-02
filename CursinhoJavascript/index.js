@@ -946,25 +946,65 @@ map
  * Cookie
  */
 
-function setCookie(name, value, expireInDays = 365) {
-	const date = new Date();
-	date.setTime(date.getTime() + expireInDays * 24 * 60 * 60 * 1000);
-	let expires = 'expires=' + date.toUTCString();
-	document.cookie = `${name}=${value}; ${expires}; path=/`;
-}
+// function setCookie(name, value, expireInDays = 365) {
+// 	const date = new Date();
+// 	date.setTime(date.getTime() + expireInDays * 24 * 60 * 60 * 1000);
+// 	let expires = 'expires=' + date.toUTCString();
+// 	document.cookie = `${name}=${value}; ${expires}; path=/`;
+// }
 
-function deleteCookie(name) {
-	setCookie(name, null, null);
-}
+// function deleteCookie(name) {
+// 	setCookie(name, null, null);
+// }
 
-function getCookie(name) {
-	const decodedCookie = decodeURIComponent(document.cookie);
-	const cookieArray = decodedCookie.split('; ');
-	let result = null;
-	cookieArray.forEach((element) => {
-		if (element.indexOf(name) === 0) {
-			result = element.substring(name.length + 1);
+// function getCookie(name) {
+// 	const decodedCookie = decodeURIComponent(document.cookie);
+// 	const cookieArray = decodedCookie.split('; ');
+// 	let result = null;
+// 	cookieArray.forEach((element) => {
+// 		if (element.indexOf(name) === 0) {
+// 			result = element.substring(name.length + 1);
+// 		}
+// 	});
+// 	return result;
+// }
+
+/**
+ * fetch()
+ */
+
+// fetch('https://pokeapi.co/api/v2/pokemon/pikachu')
+// 	.then((response) => {
+// 		return response.json();
+// 	})
+// 	.then((data) => {
+// 		const image = data.sprites.front_default;
+// 		const container = document.getElementById('img-container');
+// 		container.innerHTML = `<img src='${image}' alt='Pokemon'>`
+// 	})
+// 	.catch((error) => {
+// 		console.error(error);
+// 	});
+
+async function fetchPokemon() {
+	try {
+		const pokemonName = document.getElementById('search-bar').value.toLowerCase();
+		const response = await fetch(
+			`https://pokeapi.co/api/v2/pokemon/${pokemonName}`
+		);
+		if (response.status === 404) {
+			throw new Error(404);
+		} else if (!response.ok) {
+			throw new Error(
+				'Ocorreu um erro enquanto procurávamos seu Pokemon!'
+			);
 		}
-	});
-	return result;
+		const data = await response.json();
+		const result = document.getElementById('result');
+		result.innerHTML = `<img src='${data.sprites.front_default}' alt='${data.name}' title='${data.name}'/>`;
+		return null;
+	} catch (error) {
+		const result = document.getElementById('result');
+		result.innerHTML = `<p>${error}</p>`;
+	}
 }
