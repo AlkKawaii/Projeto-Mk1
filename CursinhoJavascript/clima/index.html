@@ -10,15 +10,22 @@
 		<title>Veja o clima!</title>
 	</head>
 	<body>
-		<form id="form">
-			<input type="search" id="search-bar" />
-			<button type="submit" id="submit">
-				<span class="material-symbols-outlined"> search </span>
-			</button>
-		</form>
-		<section id="card">
-
-        </section>
-		<script src="index.js" defer></script>
+		<main>
+			<form id="form">
+				<label for="search-bar">Pesquise o clima de uma cidade</label>
+				<div>
+					<input
+						type="search"
+						id="search-bar"
+						placeholder="Digite o nome de uma cidade"
+						required />
+					<button type="submit" id="submit">
+						<span class="material-symbols-outlined"> search </span>
+					</button>
+				</div>
+			</form>
+			<section id="card"></section>
+			<script src="index.js" defer></script>
+		</main>
 	</body>
 </html>
