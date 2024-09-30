@@ -1,138 +1,159 @@
 * {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-	user-select: none;
-	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-		'Lucida Sans', Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
 }
 
 .game-board {
-	width: 80%;
-	height: 500px;
-	margin: 100px auto;
-	position: relative;
-	overflow: hidden;
-	background: linear-gradient(to bottom right, cyan, white);
-	border-bottom: 20px rgb(13, 225, 13) solid;
-	box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.25);
+  width: 80%;
+  height: 500px;
+  margin: 100px auto;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(to bottom right, cyan, white);
+  border-bottom: 20px rgb(13, 225, 13) solid;
+  box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.25);
 }
 
 .clouds {
-	position: absolute;
-	right: -528px;
+  position: absolute;
+  right: -528px;
 }
 
 .clouds:nth-child(1) {
-	width: 30%;
-	top: 9%;
-	animation: cloudsMoving 7s linear infinite;
+  width: 30%;
+  top: 9%;
+  animation: cloudsMoving 7s linear infinite;
 }
 .clouds:nth-child(2) {
-	width: 38%;
-	top: 10%;
-	animation: cloudsMoving 8s 2s linear infinite;
+  width: 38%;
+  top: 10%;
+  animation: cloudsMoving 8s 2s linear infinite;
 }
 .clouds:nth-child(3) {
-	width: 32%;
-	top: 11%;
-	animation: cloudsMoving 9s 5s linear infinite;
+  width: 32%;
+  top: 11%;
+  animation: cloudsMoving 9s 5s linear infinite;
 }
 
 @keyframes cloudsMoving {
-	from {
-		right: -512px;
-	}
+  from {
+    right: -512px;
+  }
 
-	to {
-		right: 100%;
-	}
+  to {
+    right: 100%;
+  }
 }
 
 #mario {
-	position: absolute;
-	bottom: 0;
-	width: 150px;
-	transition: all 1s;
+  position: absolute;
+  bottom: 0;
+  width: 150px;
+  transition: all 1s;
 }
 
 #mario.jumping {
-	animation: jumping 0.7s ease-out;
+  animation: jumping 0.7s ease-out;
 }
 
 @keyframes jumping {
-	from,
-	to {
-		bottom: 0;
-	}
+  from,
+  to {
+    bottom: 0;
+  }
 
-	35%,
-	65% {
-		bottom: 110px;
-	}
+  35%,
+  65% {
+    bottom: 110px;
+  }
 }
 
 #pipe {
-	position: absolute;
-	bottom: 0;
-	right: -80px;
-	width: 80px;
+  position: absolute;
+  bottom: 0;
+  right: -80px;
+  width: 80px;
 }
 
 @keyframes pipeMoving {
-	from {
-		right: -80px;
-	}
+  from {
+    right: -80px;
+  }
 
-	to {
-		right: 100%;
-	}
+  to {
+    right: 100%;
+  }
 }
 
 dialog {
-	position: absolute;
-	flex-direction: column;
-	gap: 8px;
-	align-items: center;
-	top: 30%;
-	margin: 0 auto;
-	padding: 16px;
-	background-color: rgba(245, 245, 220, 0.75);
-	border: none;
-	border-radius: 16px;
+  position: absolute;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  top: 30%;
+  margin: 0 auto;
+  padding: 16px;
+  background-color: rgba(245, 245, 220, 0.75);
+  border: none;
+  border-radius: 16px;
 }
 
 dialog[open] {
-	display: flex;
+  display: flex;
+  animation: modalApear .7s forwards cubic-bezier(.18,.89,.32,1.28);
+}
+
+@keyframes modalApear {
+  from {
+    opacity: 0;
+    top: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 button {
-	border: none;
-	outline: none;
-	background: aliceblue;
-	padding: 4px;
-	border-radius: 4px;
-	height: 24px;
-	width: 50%;
-	cursor: pointer;
-	transition: all 0.1s;
-	&:hover {
-		box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.3);
-		transform: translateY(-1px);
-	}
-	&:focus {
-		outline: solid 2px rgba(0, 0, 255, 0.4);
-	}
+  border: none;
+  outline: none;
+  background: aliceblue;
+  padding: 4px;
+  border-radius: 4px;
+  height: 24px;
+  width: 50%;
+  cursor: pointer;
+  transition: all 0.1s;
+  &:hover {
+    box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.3);
+    transform: translateY(-1px);
+  }
+  &:focus {
+    outline: solid 2px rgba(0, 0, 255, 0.4);
+  }
 }
 
 #scoreDisplay {
-	position: absolute;
-	right: 10px;
-	top: 10px;
-	font-size: 2em;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 2em;
 }
 
 ::backdrop {
-	background-color: rgba(10, 0, 0, 0.4);
-	box-shadow: inset 0 0 100px 25px rgba(30, 0, 0, 0.75);
+  animation: bleeding 0.5s ease-in-out forwards;
+}
+
+@keyframes bleeding {
+  from {
+    background-color: transparent;
+    box-shadow: none;
+  }
+  to {
+    background-color: rgba(10, 0, 0, 0.4);
+    box-shadow: inset 0 0 100px 25px rgba(30, 0, 0, 0.75);
+  }
 }
