@@ -1,57 +1,96 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="style.css" />
-		<link rel="shortcut icon" href="calculator.png" type="image/x-icon" />
-		<title>Calculadora</title>
-	</head>
-	<body>
-		<div id="container">
-			<input type="text" id="calculus" readonly />
-			<div id="buttons">
-				<button
-					type="button"
-					onclick="calcAppend('+');"
-					class="operator">
-					+
-				</button>
-				<button type="button" onclick="calcAppend('7');">7</button>
-				<button type="button" onclick="calcAppend('8');">8</button>
-				<button type="button" onclick="calcAppend('9');">9</button>
-				<button
-					type="button"
-					onclick="calcAppend('-');"
-					class="operator">
-					-
-				</button>
-				<button type="button" onclick="calcAppend('4');">4</button>
-				<button type="button" onclick="calcAppend('5');">5</button>
-				<button type="button" onclick="calcAppend('6');">6</button>
-				<button
-					type="button"
-					onclick="calcAppend('*');"
-					class="operator">
-					*
-				</button>
-				<button type="button" onclick="calcAppend('1');">1</button>
-				<button type="button" onclick="calcAppend('2');">2</button>
-				<button type="button" onclick="calcAppend('3');">3</button>
-				<button
-					type="button"
-					onclick="calcAppend('/');"
-					class="operator">
-					/
-				</button>
-				<button type="button" onclick="calcAppend('0');">0</button>
-				<button type="button" onclick="calcAppend('.');">.</button>
-				<button type="button" onclick="calc();">=</button>
-				<button type="button" onclick="clearDisplay();" class="operator">
-					C
-				</button>
-			</div>
-		</div>
-		<script src="calc.js" defer></script>
-	</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="shortcut icon" href="calculator.png" type="image/x-icon" />
+        <title>Calculadora</title>
+    </head>
+    <body>
+        <div id="container">
+            <textarea id="calculus" readonly></textarea>
+            <div id="buttons">
+                <button
+                    type="button"
+                    onclick="calcAppend('(');"
+                    class="operator">
+                    &lpar;
+                </button>
+                <button
+                    type="button"
+                    onclick="calcAppend(')');"
+                    class="operator">
+                    &rpar;
+                </button>
+                <button
+                    type="button"
+                    onclick="clearDisplay();"
+                    class="operator">
+                    C
+                </button>
+                <button type="button" onclick="backspace();" class="operator">
+                    ⌫
+                </button>
+                <button
+                    type="button"
+                    onclick="calcAppend('Ans');"
+                    class="operator">
+                    Ans
+                </button>
+                <button
+                    type="button"
+                    onclick="calcAppend('^');"
+                    class="operator">
+                    ^
+                </button>
+                <button
+                    type="button"
+                    onclick="calcAppend('&Sqrt;');"
+                    class="operator">
+                    &Sqrt;
+                </button>
+                <button
+                    type="button"
+                    onclick="calcAppend('/');"
+                    class="operator">
+                    /
+                </button>
+                <button type="button" onclick="calcAppend('7');">7</button>
+                <button type="button" onclick="calcAppend('8');">8</button>
+                <button type="button" onclick="calcAppend('9');">9</button>
+                <button
+                    type="button"
+                    onclick="calcAppend('+');"
+                    class="operator">
+                    +
+                </button>
+                <button type="button" onclick="calcAppend('4');">4</button>
+                <button type="button" onclick="calcAppend('5');">5</button>
+                <button type="button" onclick="calcAppend('6');">6</button>
+                <button
+                    type="button"
+                    onclick="calcAppend('-');"
+                    class="operator">
+                    -
+                </button>
+                <button type="button" onclick="calcAppend('1');">1</button>
+                <button type="button" onclick="calcAppend('2');">2</button>
+                <button type="button" onclick="calcAppend('3');">3</button>
+                <button
+                    type="button"
+                    onclick="calcAppend('*');"
+                    class="operator">
+                    *
+                </button>
+                <button type="button" onclick="calcAppend('0');">0</button>
+                <button type="button" onclick="calcAppend('.');">.</button>
+                <button type="button" onclick="calcAppend('π');">π</button>
+                <button type="button" onclick="calc();" class="operator">
+                    =
+                </button>
+            </div>
+        </div>
+        <script src="calc.js" defer></script>
+    </body>
 </html>

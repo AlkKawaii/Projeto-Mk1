@@ -1,10 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comic Sans MS', cursive, monospace;
+}
+
+
 #container {
+    position: absolute;
+    inset: 0;
     display: flex;
     flex-flow: column nowrap;
-    width: 26vw;
-    height: 67vh;
+    width: 60vmin;
+    height: fit-content;
     margin: auto;
-    margin-top: 10vh;
     background-color: rgba(0, 0, 0, 0.8);
     border-radius: 20px;
     gap: 7.5px;
@@ -12,15 +21,18 @@
 }
 
 #calculus {
-    height: 15%;
+    height: 7.5vmax;
     padding: 10px;
     background-color: rgba(255, 255, 255, 0.075);
     border: none;
     outline: none;
     cursor: default;
     text-align: right;
-    font-size: 64px;
+    /* font-size: 48vmin; */
     color: rgb(240, 240, 240);
+    resize: none;
+    overflow: hidden;
+    transition: font-size 0.2s;
 }
 
 #buttons {
@@ -28,15 +40,15 @@
     justify-items: center;
     grid-template-columns: repeat(4, 1fr);
     padding: 10px;
-    gap: 5px;
+    row-gap: 0.5em;
 }
 
 button {
     border: none;
-    width: 70px;
-    height: 70px;
+    width: 80%;
+    aspect-ratio: 1;
     border-radius: 100%;
-    font-size: 40px;
+    font-size: 2.5vmax;
     background-color: rgb(178, 178, 178);
     cursor: pointer;
     opacity: 0.7;
@@ -54,4 +66,5 @@ button:hover {
 
 button:active {
     opacity: 1;
+    scale: 0.9;
 }
