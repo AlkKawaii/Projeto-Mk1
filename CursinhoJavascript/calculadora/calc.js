@@ -28,14 +28,17 @@ function calc() {
         expression = expression.replace(/\^/g, '**');
         expression = expression.replace(/Ans/g, lastAns);
         expression = expression.replace(/π/g, 'Math.PI');
-        expression = expression.replace(/√(\d+)|√(\(.+\))/g, 'Math.sqrt($1$2)');
+        expression = expression.replace(
+            /√(\d+(\.\d+)?)|√(\(.+\))/g,
+            '$1$3**0.5'
+        );
         console.log(expression);
 
         const result = eval(expression);
         lastAns = result;
         if (result === undefined || result === null || isNaN(result)) {
             throw new Error('Erro');
-        } else if (result === Infinity) {
+        } else if (expression.includes('/0')) {
             throw new Error('Divisão por zero');
         }
         display.value = result;
